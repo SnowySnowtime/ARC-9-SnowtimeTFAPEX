@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/tf/g7/witch"
+	"$bumpmap" "snowysnowtime/tf/g7/witch_n"
+	"$lightwarptexture"	"snowysnowtime/phongwarps/lightwarp_metallic"
+	"$phong" "1" 
+	"$phongboost" "3"
+	"$phongexponenttexture" "snowysnowtime/tf/g7/witch_exp"
+	"$phongwarptexture" "snowysnowtime/phongwarps/phongwarp"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[3 5 8]"
+	"$phongdisablehalflambert" "1"
+	"$envmap" "snowysnowtime/envmaps/specularity_1"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 1 1 1 ]"
+	"$normalmapalphaenvmapmask"	"1"
+	"$cubemappower"	0.3
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

@@ -1,0 +1,68 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/tf/g7/witch"
+	"$bumpmap" "snowysnowtime/tf/g7/witch_n"
+	"$lightwarptexture"	"snowysnowtime/phongwarps/lightwarp_metallic"
+	"$phong" "1" 
+	"$phongboost" "9"
+	"$phongexponenttexture" "snowysnowtime/tf/g7/witch_exp"
+	"$phongwarptexture" "snowysnowtime/phongwarps/phongwarp"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[3 5 8]"
+	"$phongdisablehalflambert" "1"
+	"$envmap" "snowysnowtime/envmaps/specularity_1"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 1 1 1 ]"
+	"$normalmapalphaenvmapmask"	"1"
+	"$cubemappower"	0.75
+
+	Proxies
+	{
+		drc_ReflectionTint_PlayerTint1
+		{
+			resultVar $envmaptint
+		}
+		drc_PlayerColour1
+		{
+			resultVar		$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp // clamp the chosen color between 1% and 125% (usually)
+		{
+			min .15
+			max 1.15
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+		Clamp 
+        {
+            min 0.001
+            max 0.8
+            srcVar1 "$envmaptint"
+            resultVar "$envmaptint"
+        }
+		drc_ScalingRimLight
+        {
+            resultVar $rimlightboost
+        }
+		Clamp
+        {
+            srcVar1    $color2
+            resultVar    $phongtint
+        }
+        Clamp
+        {
+            min    0.015
+            max    1
+            srcVar1    $phongtint
+            resultVar    $phongtint
+        }
+		Clamp 
+        {
+            min 0.02
+            max 1
+            srcVar1 "$color2"
+            resultVar "$color2"
+        }
+	}
+}

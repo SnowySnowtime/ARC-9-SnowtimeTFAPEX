@@ -574,6 +574,18 @@ SWEP.Animations = {
 		EventTable = {
         },
     },
+	["apex_enter_sights"] = {
+		Source = "reference",
+	},
+	["apex_idle_sights"] = {
+		Source = "reference",
+	},
+	["apex_exit_sights"] = {
+		Source = "reference",
+	},
+	["apex_fire_sights"] = {
+		Source = "fire_ads",
+	},
 	["apex_draw"] = {
         Source = {"apex_draw_first","apex_draw_seq"},
 		RareSource = "apex_draw_first_idiot", -- This fucking thing SUCKS to get as a draw animation. but its funny, so lets just make it REALLY rare.
