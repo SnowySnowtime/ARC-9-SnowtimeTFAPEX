@@ -4,8 +4,9 @@ $maxverts 9999999
 $bodygroup "body"
 {
 	studio "meshes/tf_g2 1.smd"
+	studio "meshes/tf_g2_camo 1.smd"
 	studio "meshes/apex_g7 1.smd"
-	blank
+	studio "meshes/apex_g7_camo 1.smd"
 	studio "meshes/tf_g2master.smd"
 	studio "meshes/g7_racer_1.smd"
 	studio "meshes/g7dragon_1.smd"
@@ -15,7 +16,6 @@ $bodygroup "2"
 {
 	studio "meshes/tf_g2 2.smd"
 	studio "meshes/g7_apex 3.smd"
-	blank
 	studio "meshes/tf_g2master2.smd"
 	studio "meshes/g7_racer_2.smd"
 	studio "meshes/g7dragon_2.smd"

@@ -52,251 +52,103 @@ SWEP.RangeMin = 0
 SWEP.RicochetAngleMax = 45
 SWEP.RicochetChance = 0
 
--- Lets balance our shit based on if we're playing discount plunder or not.
-local gamemode = engine.ActiveGamemode()
-if gamemode == "profiteers" then
-	-- Damage Profile --
-	SWEP.ArmorPiercing = 0
-	SWEP.DamageMax = 18
-	SWEP.DamageMin = 12
-	SWEP.DamageRand = 0
-	-- Projectile --
-	SWEP.AlwaysPhysBullet = true
-	SWEP.BulletGuidance = false
-	SWEP.BulletGuidanceAmount = 15000
-	SWEP.FancyBullets = true
-	SWEP.NeverPhysBullet = false
-	SWEP.PhysBulletDontInheritPlayerVelocity = false
-	SWEP.PhysBulletDrag = 0
-	SWEP.PhysBulletGravity = 1
-	SWEP.PhysBulletModel = nil
-	SWEP.PhysBulletModelStick = nil
-	SWEP.PhysBulletMuzzleVelocity = 15000
-	SWEP.BodyDamageMults = {
-		[HITGROUP_HEAD] = 2,
-		[HITGROUP_CHEST] = 1,
-		[HITGROUP_STOMACH] = 1,
-		[HITGROUP_LEFTARM] = 0.9,
-		[HITGROUP_RIGHTARM] = 0.9,
-		[HITGROUP_LEFTLEG] = 0.9,
-		[HITGROUP_RIGHTLEG] = 0.9,
-		[HITGROUP_GEAR] = 0.9,
-	}
-		-- Recoil --
-	SWEP.RecoilSeed = nil
-	SWEP.RecoilPatternDrift = 0
-	SWEP.RecoilLookupTable = nil
-	-- SWEP.RecoilLookupTable = {
-	--     15,
-	--     3,
-	-- }
-	SWEP.PushBackForce = 0 
-	SWEP.Recoil = 0.3
-	SWEP.RecoilAutoControl = 0
-	SWEP.RecoilDissipationRate = 10
-	SWEP.RecoilLookupTableOverrun = nil
-	SWEP.RecoilRandomSide = 0.1
-	SWEP.RecoilRandomUp = 0.1
-	SWEP.RecoilResetTime = 0.2
-	SWEP.RecoilSide = 0.05
-	SWEP.RecoilUp = 0.3
-	SWEP.RumbleDuration = 0.12
-	SWEP.RumbleHeavy = 30000
-	SWEP.RumbleLight = 30000
+SWEP.ArmorPiercing = 0
+SWEP.DamageMax = 20
+SWEP.DamageMin = 15
+SWEP.DamageRand = 0
+-- Projectile --
+SWEP.AlwaysPhysBullet = true
+SWEP.BulletGuidance = false
+SWEP.BulletGuidanceAmount = 15000
+SWEP.FancyBullets = true
+SWEP.NeverPhysBullet = false
+SWEP.PhysBulletDontInheritPlayerVelocity = false
+SWEP.PhysBulletDrag = 0
+SWEP.PhysBulletGravity = 1
+SWEP.PhysBulletModel = nil
+SWEP.PhysBulletModelStick = nil
+SWEP.PhysBulletMuzzleVelocity = 95000
+SWEP.BodyDamageMults = {
+	[HITGROUP_HEAD] = 2,
+	[HITGROUP_CHEST] = 1,
+	[HITGROUP_STOMACH] = 1,
+	[HITGROUP_LEFTARM] = 0.9,
+	[HITGROUP_RIGHTARM] = 0.9,
+	[HITGROUP_LEFTLEG] = 0.9,
+	[HITGROUP_RIGHTLEG] = 0.9,
+	[HITGROUP_GEAR] = 0.9,
+}
+	-- Recoil --
+SWEP.RecoilSeed = nil
+SWEP.RecoilPatternDrift = 0
+SWEP.RecoilLookupTable = nil
+-- SWEP.RecoilLookupTable = {
+--     15,
+--     3,
+-- }
+SWEP.PushBackForce = 0 
+SWEP.Recoil = 0.3
+SWEP.RecoilAutoControl = 0
+SWEP.RecoilDissipationRate = 10
+SWEP.RecoilLookupTableOverrun = nil
+SWEP.RecoilRandomSide = 0.1
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilResetTime = 0.2
+SWEP.RecoilSide = 0.05
+SWEP.RecoilUp = 0.3
+SWEP.RumbleDuration = 0.12
+SWEP.RumbleHeavy = 30000
+SWEP.RumbleLight = 30000
 
-		-- Visual Recoil --
-	SWEP.RecoilKick = 1
-	SWEP.UseVisualRecoil = true
-	SWEP.VisualRecoilCenter = Vector(0,100,0)
-	SWEP.VisualRecoilHipFire = true
-	SWEP.VisualRecoilMult = 1
-	SWEP.VisualRecoilPunch = 0.75
-	SWEP.VisualRecoilRoll = 2
-	SWEP.VisualRecoilSide = 0.05
-	SWEP.VisualRecoilUp = 0.3
+	-- Visual Recoil --
+SWEP.RecoilKick = 1
+SWEP.UseVisualRecoil = true
+SWEP.VisualRecoilCenter = Vector(0,100,0)
+SWEP.VisualRecoilHipFire = true
+SWEP.VisualRecoilMult = 1
+SWEP.VisualRecoilPunch = 0.75
+SWEP.VisualRecoilRoll = 2
+SWEP.VisualRecoilSide = 0.05
+SWEP.VisualRecoilUp = 0.3
 
-		-- Spread --
-	SWEP.Spread = 0.002
-	SWEP.UsePelletSpread = false
-	SWEP.PelletSpread = 0.2
-	SWEP.PelletSpreadPattern = {}
-	SWEP.PelletSpreadPatternOverrun = nil
-	SWEP.SpreadAddBlindFire = 0
-	SWEP.SpreadAddCrouch = 0
-	SWEP.SpreadAddHipFire = 0.05
-	SWEP.SpreadAddMidAir = 0
-	SWEP.SpreadAddMove = 0
-	SWEP.SpreadAddRecoil = 0.05
-	SWEP.SpreadAddSighted = 0
+	-- Spread --
+SWEP.Spread = 0.0001
+SWEP.UsePelletSpread = false
+SWEP.PelletSpread = 0.2
+SWEP.PelletSpreadPattern = {}
+SWEP.PelletSpreadPatternOverrun = nil
+SWEP.SpreadAddBlindFire = 0
+SWEP.SpreadAddCrouch = 0
+SWEP.SpreadAddHipFire = 0.01
+SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddMove = 0
+SWEP.SpreadAddRecoil = 0.0005
+SWEP.SpreadAddSighted = 0
 
-		-- Handling --
-	SWEP.AimDownSightsTime = 0.25
-	SWEP.CycleTime = 1
-	SWEP.DeployTime = 1
-	SWEP.FixTime = 1
-	SWEP.FreeAimRadius = 0
-	SWEP.FreeAimRadiusMultSights = 0.25
-	SWEP.HoldBreathTime = 5
-	SWEP.OverheatTime = 1
-	SWEP.ReloadTime = 1
-	SWEP.RestoreBreathTime = 5
-	SWEP.ShootWhileSprint = false
-	SWEP.Speed = 1
-	SWEP.SpeedMult = 1
-	SWEP.SpeedMultBlindFire = 1
-	SWEP.SpeedMultCrouch = 1
-	SWEP.SpeedMultMelee = 0.75
-	SWEP.SpeedMultShooting = 0.9
-	SWEP.SpeedMultSights = 0.75
-	SWEP.SprintToFireTime = 0.25
-	SWEP.Sway = 0
-	SWEP.SwayMultSights = 0.5
-		-- Positions --
-	SWEP.IronSights = {
-		Pos = Vector(-1, -6, 0),
-		Ang = Angle(0, 0, 0),
-		Magnification = 1.15,
-		AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
-		CrosshairInSights = true,
-		---- FLAT SCOPES
-		-- These don't look very good; please use actual RT scopes if possible.
-		FlatScope = false,
-		FlatScopeOverlay = "hi.vmt", -- Material()
-		FlatScopeKeepVM = true,
-		FlatScopeBlackBox = false,
-		FlatScopeCC = nil -- Color correction table, see default.lua
-	}
+	-- Handling --
+SWEP.AimDownSightsTime = 0.25
+SWEP.CycleTime = 1
+SWEP.DeployTime = 1
+SWEP.FixTime = 1
+SWEP.FreeAimRadius = 0
+SWEP.FreeAimRadiusMultSights = 0.25
+SWEP.HoldBreathTime = 5
+SWEP.OverheatTime = 1
+SWEP.ReloadTime = 1
+SWEP.RestoreBreathTime = 5
+SWEP.ShootWhileSprint = false
+SWEP.Speed = 1
+SWEP.SpeedMult = 1
+SWEP.SpeedMultBlindFire = 1
+SWEP.SpeedMultCrouch = 1
+SWEP.SpeedMultMelee = 0.75
+SWEP.SpeedMultShooting = 0.9
+SWEP.SpeedMultSights = 0.75
+SWEP.SprintToFireTime = 0.25
+SWEP.Sway = 0
+SWEP.SwayMultSights = 0.5
+-- print("SANDBOX BAL")
 
-	SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-		Pos = Vector(0, 10, 0),
-		Ang = Angle(0, 0, 0),
-	}
-	SWEP.HasSights = true
-	-- print("PROFITEERS BAL")
-	SWEP.Description = [[The MA5B is a standard-issue automatic rifle that is part of the Misriah Armory's MA5 Individual Combat Weapon System.
-This weapon has been adjusted for Profiteers.]]
-else
-	-- Damage Profile --
-	SWEP.ArmorPiercing = 0
-	SWEP.DamageMax = 20
-	SWEP.DamageMin = 15
-	SWEP.DamageRand = 0
-	-- Projectile --
-	SWEP.AlwaysPhysBullet = true
-	SWEP.BulletGuidance = false
-	SWEP.BulletGuidanceAmount = 15000
-	SWEP.FancyBullets = true
-	SWEP.NeverPhysBullet = false
-	SWEP.PhysBulletDontInheritPlayerVelocity = false
-	SWEP.PhysBulletDrag = 0
-	SWEP.PhysBulletGravity = 1
-	SWEP.PhysBulletModel = nil
-	SWEP.PhysBulletModelStick = nil
-	SWEP.PhysBulletMuzzleVelocity = 95000
-	SWEP.BodyDamageMults = {
-		[HITGROUP_HEAD] = 2,
-		[HITGROUP_CHEST] = 1,
-		[HITGROUP_STOMACH] = 1,
-		[HITGROUP_LEFTARM] = 0.9,
-		[HITGROUP_RIGHTARM] = 0.9,
-		[HITGROUP_LEFTLEG] = 0.9,
-		[HITGROUP_RIGHTLEG] = 0.9,
-		[HITGROUP_GEAR] = 0.9,
-	}
-		-- Recoil --
-	SWEP.RecoilSeed = nil
-	SWEP.RecoilPatternDrift = 0
-	SWEP.RecoilLookupTable = nil
-	-- SWEP.RecoilLookupTable = {
-	--     15,
-	--     3,
-	-- }
-	SWEP.PushBackForce = 0 
-	SWEP.Recoil = 0.3
-	SWEP.RecoilAutoControl = 0
-	SWEP.RecoilDissipationRate = 10
-	SWEP.RecoilLookupTableOverrun = nil
-	SWEP.RecoilRandomSide = 0.1
-	SWEP.RecoilRandomUp = 0.1
-	SWEP.RecoilResetTime = 0.2
-	SWEP.RecoilSide = 0.05
-	SWEP.RecoilUp = 0.3
-	SWEP.RumbleDuration = 0.12
-	SWEP.RumbleHeavy = 30000
-	SWEP.RumbleLight = 30000
-
-		-- Visual Recoil --
-	SWEP.RecoilKick = 1
-	SWEP.UseVisualRecoil = true
-	SWEP.VisualRecoilCenter = Vector(0,100,0)
-	SWEP.VisualRecoilHipFire = true
-	SWEP.VisualRecoilMult = 1
-	SWEP.VisualRecoilPunch = 0.75
-	SWEP.VisualRecoilRoll = 2
-	SWEP.VisualRecoilSide = 0.05
-	SWEP.VisualRecoilUp = 0.3
-
-		-- Spread --
-	SWEP.Spread = 0.002
-	SWEP.UsePelletSpread = false
-	SWEP.PelletSpread = 0.2
-	SWEP.PelletSpreadPattern = {}
-	SWEP.PelletSpreadPatternOverrun = nil
-	SWEP.SpreadAddBlindFire = 0
-	SWEP.SpreadAddCrouch = 0
-	SWEP.SpreadAddHipFire = 0.05
-	SWEP.SpreadAddMidAir = 0
-	SWEP.SpreadAddMove = 0
-	SWEP.SpreadAddRecoil = 0.05
-	SWEP.SpreadAddSighted = 0
-
-		-- Handling --
-	SWEP.AimDownSightsTime = 0.25
-	SWEP.CycleTime = 1
-	SWEP.DeployTime = 1
-	SWEP.FixTime = 1
-	SWEP.FreeAimRadius = 0
-	SWEP.FreeAimRadiusMultSights = 0.25
-	SWEP.HoldBreathTime = 5
-	SWEP.OverheatTime = 1
-	SWEP.ReloadTime = 1
-	SWEP.RestoreBreathTime = 5
-	SWEP.ShootWhileSprint = false
-	SWEP.Speed = 1
-	SWEP.SpeedMult = 1
-	SWEP.SpeedMultBlindFire = 1
-	SWEP.SpeedMultCrouch = 1
-	SWEP.SpeedMultMelee = 0.75
-	SWEP.SpeedMultShooting = 0.9
-	SWEP.SpeedMultSights = 0.75
-	SWEP.SprintToFireTime = 0.25
-	SWEP.Sway = 0
-	SWEP.SwayMultSights = 0.5
-		-- Positions --
-	SWEP.IronSights = {
-		Pos = Vector(-1, -6, 0),
-		Ang = Angle(0, 0, 0),
-		Magnification = 1.15,
-		AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
-		CrosshairInSights = true,
-		---- FLAT SCOPES
-		-- These don't look very good; please use actual RT scopes if possible.
-		FlatScope = false,
-		FlatScopeOverlay = "hi.vmt", -- Material()
-		FlatScopeKeepVM = true,
-		FlatScopeBlackBox = false,
-		FlatScopeCC = nil -- Color correction table, see default.lua
-	}
-
-	SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-		Pos = Vector(0, 10, 0),
-		Ang = Angle(0, 0, 0),
-	}
-	SWEP.HasSights = true
-	-- print("SANDBOX BAL")
-	SWEP.Description = [[The MA5B is a standard-issue automatic rifle that is part of the Misriah Armory's MA5 Individual Combat Weapon System.
-This weapon has been adjusted for Sandbox.]]
-end
 	
 	-- Tracers/Effects --
 SWEP.TracerColor = Color(255, 255, 0)
@@ -410,11 +262,11 @@ SWEP.ShootSound = "arc9.tfg2.fire"
 SWEP.ShootSoundSilenced = ""
 	-- Positions --
 SWEP.IronSights = {
-    Pos = Vector(0, 0, 0),
-    Ang = Angle(0, 0, 0),
-    Magnification = 1,
+    Pos = Vector(-3.975, -5, 0.2),
+    Ang = Angle(0, 1, -4.5),
+    Magnification = 1.25,
     AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
-    CrosshairInSights = false,
+    CrosshairInSights = true,
     ---- FLAT SCOPES
     -- These don't look very good; please use actual RT scopes if possible.
     FlatScope = false,
@@ -428,7 +280,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Pos = Vector(-1, 15, -4),
     Ang = Angle(0, 0, -35),
 }
-SWEP.HasSights = false
+SWEP.HasSights = true
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-4, 1, -4)
@@ -443,8 +295,8 @@ SWEP.HolsterPos = Vector(0, 0, 0)
 SWEP.HolsterAng = Angle(0, 0, 0)
 
 SWEP.SprintMidPoint = {
-    Pos = Vector(0,0,0),
-    Ang = Angle(0, 0,0)
+    Pos = Vector(0, 0, 0),
+    Ang = Angle(0, 0, 0)
 }
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -606,25 +458,33 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 	
-    if attached["tfg2_apex01"] then
+    if attached["universal_camo"] and not attached["apex_g2"] then
         vm:SetBodygroup(0,1)
+        -- vm:SetBodygroup(1,1)
+        -- vm:SetBodygroup(2,1)
+	elseif attached["tfg2_apex01"] and not attached["universal_camo"] then
+		vm:SetBodygroup(0,2)
+        vm:SetBodygroup(1,1)
+        vm:SetBodygroup(2,1)
+	elseif attached["tfg2_apex01"] and attached["universal_camo"] then
+		vm:SetBodygroup(0,3)
         vm:SetBodygroup(1,1)
         vm:SetBodygroup(2,1)
 	elseif attached["tfg2_apex02"] then
-		vm:SetBodygroup(0,3)
-        vm:SetBodygroup(1,3)
+		vm:SetBodygroup(0,4)
+        vm:SetBodygroup(1,2)
         vm:SetBodygroup(2,2)
 	elseif attached["tfg2_apex03"] then
-		vm:SetBodygroup(0,4)
-        vm:SetBodygroup(1,4)
+		vm:SetBodygroup(0,5)
+        vm:SetBodygroup(1,3)
         vm:SetBodygroup(2,3)
 	elseif attached["tfg2_apex04"] then
-		vm:SetBodygroup(0,5)
-        vm:SetBodygroup(1,5)
+		vm:SetBodygroup(0,6)
+        vm:SetBodygroup(1,4)
         vm:SetBodygroup(2,4)
 	elseif attached["tfg2_apex08"] then
-		vm:SetBodygroup(0,6)
-        vm:SetBodygroup(1,6)
+		vm:SetBodygroup(0,7)
+        vm:SetBodygroup(1,5)
         vm:SetBodygroup(2,5)
     end
 
@@ -639,6 +499,18 @@ SWEP.Animations = {
 			{hide = 4, t = 0}
         },
     },
+	["enter_sights"] = {
+		Source = "reference",
+	},
+	["idle_sights"] = {
+		Source = "reference",
+	},
+	["exit_sights"] = {
+		Source = "reference",
+	},
+	["fire_sights"] = {
+		Source = "fire_ads",
+	},
 	["draw"] = {
         Source = "draw_seq",
         Time = 0.75,
@@ -665,7 +537,7 @@ SWEP.Animations = {
 	["reload_empty"] = {
         Source = {"reload_empty_seq"}, -- QC sequence source, can be {"table", "of", "strings"} or "string"
 		RareSource = "reload_empty_seq_rare", -- Has a small chance to play instead of normal source
-		RareSourceChance = 0.005, -- chance that rare source will play
+		RareSourceChance = 0.01, -- chance that rare source will play
         Mult = 1, -- multiplies time
         EventTable = {
 			{hide = 0, t = 0},
@@ -705,7 +577,7 @@ SWEP.Animations = {
 	["apex_draw"] = {
         Source = {"apex_draw_first","apex_draw_seq"},
 		RareSource = "apex_draw_first_idiot", -- This fucking thing SUCKS to get as a draw animation. but its funny, so lets just make it REALLY rare.
-		RareSourceChance = 0.6, -- chance that rare source will play
+		RareSourceChance = 0.0001, -- chance that rare source will play
 		EventTable = {
         },
     },
@@ -724,7 +596,7 @@ SWEP.Animations = {
 	["apex_reload_empty"] = {
         Source = {"apex_reload_empty_seq"}, -- QC sequence source, can be {"table", "of", "strings"} or "string"
 		RareSource = "apex_reload_empty_seq_rare", -- Has a small chance to play instead of normal source
-		RareSourceChance = 0.05, -- chance that rare source will play
+		RareSourceChance = 0.01, -- chance that rare source will play
         Mult = 1, -- multiplies time
         EventTable = {
         },
