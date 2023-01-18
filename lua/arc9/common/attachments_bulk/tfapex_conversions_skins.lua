@@ -14,6 +14,17 @@ ATT.Description = [[A successor of the renowned G2A5 which was simplified for ma
 This conversion supports the usage of Camos and is a cosmetic.]]
 ATT.MenuCategory = "ARC9 - Apex Legends"
 ATT.SortOrder = 2
+ATT.Attachments = {
+    {
+        PrintName = "G7 Skins",
+        Bone = "def_c_base",
+        Pos = Vector(5, 0, -2.2),
+        Ang = Angle(-0.48, 0.16, 0),
+		CorrectiveAng = Angle(0, 0, 0), -- sometimes, the autosolver needs a little help. Try (-1, -1, 0)
+        Icon_Offset = Vector(0, 0, 1.5),
+        Category = {"g7_apex"},
+    },
+}
 
 ARC9.LoadAttachment(ATT, "tfg2_apex01")
 
@@ -43,7 +54,7 @@ ATT.CompactName = "Blood"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g7_apex"
 ATT.Description = [[A successor of the renowned G2A5 which was simplified for mass production.
 This particular conversion gives the G7 a race-car appearance.
 
@@ -61,7 +72,7 @@ ATT.CompactName = "Dragon"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g7_apex"
 ATT.Description = [[A successor of the renowned G2A5 which was simplified for mass production.
 This particular conversion gives the G7 a gilded dragon appearance.
 "IT WAS DRAGONS!"
@@ -80,7 +91,7 @@ ATT.CompactName = "DragonRed"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g7_apex"
 ATT.Description = [[A successor of the renowned G2A5 which was simplified for mass production.
 This particular conversion gives the G7 a gilded dragon appearance.
 "IT WAS DRAGONS!"
@@ -99,7 +110,7 @@ ATT.CompactName = "DragonBlu"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g7_apex"
 ATT.Description = [[A successor of the renowned G2A5 which was simplified for mass production.
 This particular conversion gives the G7 a gilded dragon appearance.
 "IT WAS DRAGONS!"
@@ -118,7 +129,7 @@ ATT.CompactName = "DragonGRN"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g7_apex"
 ATT.Description = [[A successor of the renowned G2A5 which was simplified for mass production.
 This particular conversion gives the G7 a gilded dragon appearance.
 "IT WAS DRAGONS!"
@@ -137,7 +148,7 @@ ATT.CompactName = "S6"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g7_apex"
 ATT.Description = [[A successor of the renowned G2A5 which was simplified for mass production.
 This particular conversion gives the G7 a S6 appearance.
 

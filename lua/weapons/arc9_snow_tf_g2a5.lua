@@ -462,11 +462,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(0,1)
         -- vm:SetBodygroup(1,1)
         -- vm:SetBodygroup(2,1)
-	elseif attached["tfg2_apex01"] and not attached["universal_camo"] then
+	elseif attached["tfg2_apex01"] and not attached["universal_camo"] and not attached["g7_apex"] then
 		vm:SetBodygroup(0,2)
         vm:SetBodygroup(1,1)
         vm:SetBodygroup(2,1)
-	elseif attached["tfg2_apex01"] and attached["universal_camo"] then
+	elseif attached["tfg2_apex01"] and attached["universal_camo"] and not attached["g7_apex"] then
 		vm:SetBodygroup(0,3)
         vm:SetBodygroup(1,1)
         vm:SetBodygroup(2,1)
