@@ -14,3 +14,4 @@ All TF|2 and Apex Weaponry.
 # Credits
 - Snowy Snowtime - Porting Titanfall 2 and Apex Models, Materials, and Animations.
 - shibuvex - Sent me a few of the masterwork materials, In particular: G2A5, and the Unreleased R-101 masterwork.
+- CurlySparkle - Apex Hands rig
