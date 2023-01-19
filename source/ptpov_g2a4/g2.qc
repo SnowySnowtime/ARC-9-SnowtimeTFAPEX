@@ -3,32 +3,23 @@ $maxverts 9999999
 
 $bodygroup "body"
 {
-	studio "meshes/tf_g2 1.smd"
-	studio "meshes/tf_g2_camo 1.smd"
-	studio "meshes/apex_g7 1.smd"
-	studio "meshes/apex_g7_camo 1.smd"
-	studio "meshes/tf_g2master.smd"
-	studio "meshes/g7_racer_1.smd"
-	studio "meshes/g7dragon_1.smd"
-	studio "meshes/g7_scifi_1.smd"
+	studio "mesh_new/tf_g2 1.smd"
+	studio "mesh_new/tf_g2_camo 1.smd"
+	studio "mesh_new/apex_g7 1.smd"
+	studio "mesh_new/apex_g7_camo 1.smd"
+	studio "mesh_new/tf_g2master.smd"
 }
 $bodygroup "2"
 {
-	studio "meshes/tf_g2 2.smd"
-	studio "meshes/g7_apex 3.smd"
-	studio "meshes/tf_g2master2.smd"
-	studio "meshes/g7_racer_2.smd"
-	studio "meshes/g7dragon_2.smd"
-	studio "meshes/g7_scifi_2.smd"
+	studio "mesh_new/tf_g2 2.smd"
+	studio "mesh_new/g7_apex 3.smd"
+	studio "mesh_new/tf_g2master2.smd"
 }
 $bodygroup "3"
 {
-	studio "meshes/tf_g2 mag.smd"
-	studio "meshes/g7_apex 4.smd"
-	studio "meshes/tf_g2master3.smd"
-	studio "meshes/g7_racer_3.smd"
-	studio "meshes/g7dragon_3.smd"
-	studio "meshes/g7_scifi_3.smd"
+	studio "mesh_new/tf_g2 mag.smd"
+	studio "mesh_new/g7_apex 4.smd"
+	studio "mesh_new/tf_g2master3.smd"
 }
 $surfaceprop "default"
 
@@ -48,6 +39,6 @@ $cbox 0 0 0 0 0 0
 
 $bbox -9.951 -2.181 -67.93 30.685 2.446 -55.878
 
-$include "titanfall_hands.qci"
+$include "titanfall_hands_test.qci"
 $include "g2a4_anims.qci"
 $include "g2_coll.qci"
