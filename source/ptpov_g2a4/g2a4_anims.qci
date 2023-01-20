@@ -1,6 +1,9 @@
 $animation "ref" "tf2_anims\ref_idle.smd" {
 	fps 30
 }
+$animation "ref_walk" "tf2_anims\ref_walk.smd" {
+	fps 24
+}
 $animation "fire_ref" "tf2_anims\fire_ref.smd" {
 	fps 30
 }
@@ -13,6 +16,8 @@ $animation "fire_layer" "tf2_anims\attack_anim.smd" fps 30 subtract fire_layer 0
 $sequence "firer" fire_layer fps 30 loop delta
 $animation "fire_ads_layer" "tf2_anims\attack_ads_anim.smd" fps 30 subtract fire_ads_layer 0
 $sequence "firer_ads" fire_ads_layer fps 30 loop delta
+$animation "walk_layer" "tf2_anims\walk_anim.smd" fps 30 subtract walk_layer 0
+$sequence "walker" walk_layer fps 30 loop delta
 
 $sequence "reference" {
 	"tf2_anims\!basepose.smd"
@@ -152,6 +157,17 @@ $sequence "sprint_seq" {
 	rotate -90
 	fps 30
 	loop
+}
+
+$sequence "walk" {
+	"ref_walk"
+	activity "ACT_VM_WALK" 1
+	addlayer walker
+	fadein 0
+	fadeout 0
+	snap
+	rotate -90
+	fps 30
 }
 
 $animation "apex_ref" "apex_anims\ref_idle.smd" {

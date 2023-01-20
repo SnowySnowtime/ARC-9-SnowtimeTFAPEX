@@ -158,8 +158,12 @@ SWEP.TracerNum = 1
 SWEP.MuzzleParticle = "tfa_apex_muzzle_sniper" -- Used for some muzzle effects.
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 5 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 1
+SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
+SWEP.CamQCA = 6
+SWEP.CamQCA_Mult = 1 -- Intensity for QC camera movement.
+SWEP.CamOffsetAng = Angle(0, 90, 90)
+SWEP.CamQCA_Mult_ADS = 0 -- Intensity for QC camera movement in ADS.
+SWEP.CamCoolView = false
 
 	-- Magazine --
 SWEP.ShouldDropMag = true
@@ -172,7 +176,7 @@ SWEP.CanFireUnderwater = true
 SWEP.ChamberSize = 0 -- Halo Weapons DONT chamber rounds. PLEASE dont fucking enable this.
 SWEP.ClipSize = 14
 SWEP.Disposable = false
-SWEP.DropMagazineAmount = 1
+SWEP.DropMagazineAmount = 0
 SWEP.DropMagazineModel = "models/snowysnowtime/arc9/hce/rifles/ar_mag.mdl"
 SWEP.DropMagazineSounds = {"arc9.cear.deploy"}
 SWEP.DropMagazineTime = 1
@@ -413,7 +417,7 @@ SWEP.Attachments = {
         Bone = "def_c_base",
         Pos = Vector(0, -2.5, 8),
         Ang = Angle(0, 0, 0),
-        Category = {"apex_g2"},
+        Category = {"apex_g2","g2_mastery"},
     },
 }
 
@@ -448,7 +452,7 @@ SWEP.ReloadHideBoneTables = {
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["tfg2_apex01"] or elements["tfg2_apex03"] or elements["tfg2_apex04"] or elements["tfg2_apex08"] then
+    if elements["apex_g2"] then
         return "apex_" ..anim
     end
 end
@@ -518,6 +522,13 @@ SWEP.Animations = {
 			{hide = 4, t = 0}
         },
     },
+	["ready"] = {
+        Source = "draw_seq",
+        Time = 0.75,
+		EventTable = {
+			{hide = 4, t = 0}
+        },
+    },
 	["holster"] = {
         Source = "holster_seq",
 		Time = 0.75,
@@ -567,6 +578,27 @@ SWEP.Animations = {
 			{hide = 4, t = 0}
         },
     },
+	["enter_walk"] = {
+        Source = "reference",
+        Time = 0.25,
+		EventTable = {
+			{hide = 4, t = 0}
+        },
+    },
+	["idle_walk"] = {
+        Source = "walk",
+        Time = 24 / 30,
+		EventTable = {
+			{hide = 4, t = 0}
+        },
+    },
+	["exit_walk"] = {
+        Source = "reference",
+        Time = 0.8,
+		EventTable = {
+			{hide = 4, t = 0}
+        },
+    },
 	--apex
 	["apex_idle"] = {
         Source = "apex_idle",
@@ -577,20 +609,27 @@ SWEP.Animations = {
 	["apex_enter_sights"] = {
 		Source = "reference",
 	},
-	["apex_idle_sights"] = {
+	["apex_idle_iron"] = {
 		Source = "reference",
 	},
-	["apex_exit_sights"] = {
+	["apex_exit_iron"] = {
 		Source = "reference",
 	},
-	["apex_fire_sights"] = {
+	["apex_fire_iron"] = {
 		Source = "fire_ads",
 	},
 	["apex_draw"] = {
         Source = {"apex_draw_first","apex_draw_seq"},
 		RareSource = "apex_draw_first_idiot", -- This fucking thing SUCKS to get as a draw animation. but its funny, so lets just make it REALLY rare.
-		RareSourceChance = 0.0001, -- chance that rare source will play
+		RareSourceChance = 0.8, -- chance that rare source will play
 		EventTable = {
+        },
+    },
+	["apex_ready"] = {
+        Source = "apex_draw_first",
+        Time = 0.75,
+		EventTable = {
+			{hide = 4, t = 0}
         },
     },
 	["apex_holster"] = {
@@ -634,3 +673,7 @@ SWEP.Animations = {
         },
     },
 }
+
+SWEP.BobScale = 0
+SWEP.SwayScale = 0
+SWEP.NoViewBob = true

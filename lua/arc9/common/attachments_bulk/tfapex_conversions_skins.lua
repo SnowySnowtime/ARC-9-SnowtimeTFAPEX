@@ -36,7 +36,7 @@ ATT.CompactName = "Mastery"
 -- ATT.Model = "models/snowysnowtime/arc9/tf2/rifles/c_g7scout.mdl"
 -- ATT.Bonemerge = true
 ATT.Icon = Material("snowysnowtime/camos/camo_1")
-ATT.Category = "apex_g2"
+ATT.Category = "g2_mastery"
 ATT.Description = [[A variant of the G2A5 meant for the most elite of the elite.
 If you have this, you are a true G2 user.
 
